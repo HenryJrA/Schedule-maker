@@ -1,8 +1,8 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+<%- include('./partials/nav.ejs') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>hello, <%= user ? user.profile.name : "you trying to check your schedule? sign in  to see it" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img 
@@ -13,4 +13,4 @@
   <% } %>
 </main>
 
-<%- include('./partials/footer') %>
+<%- include('./partials/footer.ejs') %>
