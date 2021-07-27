@@ -2,15 +2,17 @@
 <%- include('./partials/nav.ejs') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "you trying to check your schedule? sign in  to see it" %></h1>
+  
   <% if (user?.profile.avatar) { %>
     <div>
       <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
+      src="<%= user.profile.avatar %>" 
+      alt="<%= user.profile.name %> avatar"
       >
     </div>
-  <% } %>
-</main>
-
+    <% } %>
+    <h1>hello, <%= user ? user.profile.name : "heelooo??"  %></h1>
+    <a href="/profile/new">new profile</a>
+  </main>
+  
 <%- include('./partials/footer.ejs') %>
