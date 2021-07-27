@@ -13,7 +13,35 @@
 <input type="date" data-provide ="date" id="start" name="trip-start"
        value="2018-07-22"
        min="2018-01-01" max="2018-12-31">
-       <style>label {
+       <h3>Add Users</h3>
+
+       <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+             <table id="users" class="table table-striped table-bordered table-hover">
+                <thead>
+                   <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>&nbsp;</th>
+                   </tr>
+                </thead>
+                <tbody>
+ 
+                </tbody>
+                <tfoot>
+                   <td><input type="text" id="name" autofocus="autofocus" placeholder="First & Last Name" required/></td>
+                   <td><input type="text" id="email" class="invalid" placeholder="yourEmail@example.com" required/></td>
+                   <td><button type="button" class="btn btn-info btn-sm" id="add">Add</button></td>
+                </tfoot>
+ 
+             </table>
+             <button type="btn btn-sm" id="clearAll" name="button">clear all</button>
+          </div>
+       </div>
+       
+       
+<style>
+label {
         display:block;
         font: 1rem 'Fira Sans', sans-serif;
     }
@@ -21,6 +49,7 @@
     input,
     label {
         margin: .4rem 0;
-    }</style>
+    }
+</style>
 </body>
 </html>

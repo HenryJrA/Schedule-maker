@@ -7,7 +7,7 @@ export {
 const scheduleSchema = new mongoose.Schema({
   date: String,
   time: Number,
-  user: reference
+//   user:{ type: String, ref: 'user'}
 }, {
   timestamps: true
 })
