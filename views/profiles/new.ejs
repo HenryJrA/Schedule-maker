@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..public/stylesheets/schedule.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/schedule.css">
     <title>Document</title>
 </head>
 <body>
-
-
        <h3>Add Users</h3>
-
-       
                 <thead>
                    <tr>
                       <th>Name</th>
@@ -20,25 +16,12 @@
                       <th>&nbsp;</th>
                    </tr>
                 </thead>
-            <form action="profiles" method="POST">
-                   <input type="text" id="name" autofocus="autofocus" placeholder="First & Last Name" />
-                   <input type="text" id="email" class="invalid" placeholder="yourEmail@example.com" />
-                   <button >Add</button>
+            <form action="/profile/add" method="POST">
+                   <input type="text" name="name" autofocus="autofocus" placeholder="First & Last Name" />
+                   <input type="text" name="email" class="invalid" placeholder="yourEmail@example.com" />
+                   <button>Add</button>
                 </form>
           </div>
        </div>
-       
-       
-<style>
-label {
-        display:block;
-        font: 1rem 'Fira Sans', sans-serif;
-    }
-    
-    input,
-    label {
-        margin: .4rem 0;
-    }
-</style>
 </body>
 </html>

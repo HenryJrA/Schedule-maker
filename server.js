@@ -63,9 +63,9 @@ app.use('/auth', authRouter)
 app.use('/profile', profileRouter)
 app.use('/schedule', scheduleRouter)
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404))
-})
+// app.use(function (req, res, next) {
+//   next(createError(404))
+// })
 
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
