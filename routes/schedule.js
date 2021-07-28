@@ -1,9 +1,9 @@
-// import { Router } from 'express'
-// const router = Router()
-// import * as schedulesCtrl from '../controllers/schedules.js'
+import { Router } from 'express'
+const router = Router()
+import * as schedulesCtrl from '../controllers/schedules.js'
 
-// // export {
-// // 	router
-// // }
+export {
+	router
+}
 
-// // router.get('/new', schedulesCtrl.new)
+router.get('/new', schedulesCtrl.index)
