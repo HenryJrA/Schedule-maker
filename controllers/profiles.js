@@ -5,7 +5,17 @@ export{
     create,
     deleteProfile as delete,
     edit,
-    update
+    update,
+    show
+}
+
+function show(req,res){
+    Profile.findById(req.params.id)
+    .then(profile => {
+        res.render('profiless/show',{
+            profile
+        })
+    })
 }
 function update(req,res){
     req.body.working = !! req.body.working
