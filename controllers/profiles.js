@@ -20,12 +20,12 @@ function deleteProfile(req, res){
         res.redirect('/profiles')
     })
 }
-// function index(req,res) {
-//   Profile.find({})
-//   .then(profiles => {
-//       console.log(profiles)
-//     res.render('profiles/index',{
-//       profiles
-//     })
-//   })
-// }
+function index(req,res) {
+  Profile.find({})
+  .then(profiles => {
+      console.log(profiles)
+    res.render('profiles/index',{
+      profiles
+    })
+  })
+}
