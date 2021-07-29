@@ -20,6 +20,7 @@ export{
 function update(req,res){
     console.log('im in the updtae function')
     req.body.working = !! req.body.working
+    console.log(req.body.working)
     Profile.findByIdAndUpdate(req.params.id, req.body, {new:true})
         .then((profile) =>{
             res.redirect(`/profiles/`)
