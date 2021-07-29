@@ -1,9 +1,10 @@
 import { Schedule } from "../models/schedule.js"
+import { Profile } from "../models/profile.js"
 export{
     index,
     newSchedule as new,
     create,
-    deleteProfile as delete,
+    deleteSchedule as delete,
     edit,
     update
     // show
@@ -36,7 +37,13 @@ function edit(req, res){
     })
 }
 function newSchedule(req, res) {
-    res.render('schedules/new')
+    Profile.find({})
+    .then(profiles=>{
+        console.log(profiles)
+        res.render('schedules/new', {
+            profiles
+        })
+    })
 }
 function create(req, res){
     // req.body.working = !!req.body.working
@@ -45,7 +52,7 @@ function create(req, res){
         res.redirect('/schedules')
     })
 }
-function deleteProfile(req, res){
+function deleteSchedule(req, res){
     Schedule.findByIdAndDelete(req.params.id, function(err, schedule){
         res.redirect('/schedules')
     })
@@ -53,7 +60,6 @@ function deleteProfile(req, res){
 function index(req,res) {
   Schedule.find({})
   .then(schedules => {
-      
     res.render('schedules/index',{
       schedules
     })

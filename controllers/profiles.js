@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+
 export{
     index,
     newProfile as new,

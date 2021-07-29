@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Look at the Schedule</h1>
-    <label for="start">working days from:</label><form action="/schedules" method="POST">
+    <label for="start">working days from:</label>
+    <form action="/schedules" method="POST">
 <input  type="date" id="start" name="trip-start"
        value="2021-07-29"
        min="2021-01-01" max="2022-12-31">
@@ -18,16 +19,21 @@
 <input type="date" id="start" name="trip-start"
        value="2021-07-29"
        min="2021-01-01" max="2022-12-31">
-    </form>
-       <form action="/schedules" method="POST">
+       <br>
+    
         <label for="startWork">Start Work: </label>
         <input type="time" id="startTime">
-        
-      </form>
-      <form action="/schedules" method="POST">
+        <br>
         <label for="startWork">End Work: </label>
         <input type="time" id="endWork">
         <button type="submit">Add</button>
+        <br>
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+              <option value="<%=  %> ">Audi</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
       </form>
 
 </body>
