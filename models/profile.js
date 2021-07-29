@@ -9,6 +9,7 @@ const profileSchema = new mongoose.Schema({
   email: String,
   avatar: String,
   working:Boolean,
+  schedule: [{type: mongoose.Schema.Types.ObjectId, ref: "Schedule"}]
    
 }, {
   timestamps: true

@@ -51,9 +51,9 @@ function deleteProfile(req, res){
     })
 }
 function index(req,res) {
-  Profile.find({})
+  Schedule.find({})
   .then(schedules => {
-      console.log(schedule)
+      
     res.render('schedules/index',{
       schedules
     })
