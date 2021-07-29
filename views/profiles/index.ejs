@@ -15,16 +15,30 @@
       <% profiles.forEach(profile => { %> 
         <form action="/profiles/<%= profile._id%>?_method=DELETE" method="POST">
           <li>
-     <a href="/profiles/<%= profile._id %> "> <%= profile.name %> </a>
-    <%= profile.email %> 
-   - <%= profile.working ? 'working' : 'Not working' %>
-   <button>Delete </button>
-   <!-- <form action=""></form>
-   <button>Edit User</button> -->
-  </li>  
-   <br>
-    <% }) %> 
-  </form>
+             <%= profile.name %> 
+            <%= profile.email %> 
+            - <%= profile.working ? 'working' : 'Not working' %>
+            <button>Delete </button>
+          </li>  
+          <br>
+        </form>
+        <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
+          <th>Name ▼</th>
+            <br>
+            <input type="text" value="<%= profile.name %> "name="name" autofocus="autofocus"  />
+            <br>
+          <th>Email ▼</th>
+          <br>
+          <input type="text" value="<%= profile.email %> " name="email" class="invalid"  />
+          <th>&nbsp;</th>
+          </tr>
+          <br>
+        <input type="checkbox" value="<%= profile.working ? 'checked' : '' %>  "name=" working">
+          <button>Edit User</button>
+        
+        
+        </form>
+          <% }) %> 
   <br>
   <% } else { %>
     <h3>There are no users yet</h3>

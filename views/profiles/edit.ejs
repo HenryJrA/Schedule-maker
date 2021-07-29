@@ -8,24 +8,24 @@
     <title>Edit User</title>
 </head>
 <body>
-       <h3>Edit Users</h3>
-                <thead>
-                   <tr>
-                      <form action="/profiles/<%= profile._id %> ?_method=PUT" method="POST">
-                        <th>Name ▼</th>
-                        <br>
-                        <input type="text" value="<%= profile.name %> "name="name" autofocus="autofocus"  />
-                        <br>
-                      <th>Email ▼</th>
-                      <br>
-                      <input type="text" value="<%= profile.email %> " name="email" class="invalid"  />
-                      <th>&nbsp;</th>
-                     </tr>
-                     <br>
-                   <input type="checkbox" value="<%= profile.working ? 'checked' : '' %>  "name=" working">
-                   <button type="submit">Edit User </button>
-                  </thead>
-                  </form>
+   <h3>Edit Users</h3>
+    <thead>
+        <tr>
+          <form action="/profiles/<%= profile._id %> ?_method=PUT" method="POST">
+            <th>Name ▼</th>
+            <br>
+            <input type="text" value="<%= profile.name %> "name="name" autofocus="autofocus"  />
+            <br>
+          <th>Email ▼</th>
+          <br>
+          <input type="text" value="<%= profile.email %> " name="email" class="invalid"  />
+          <th>&nbsp;</th>
+          </tr>
+          <br>
+        <input type="checkbox" value="<%= profile.working ? 'checked' : '' %>  "name=" working">
+        <button type="submit">Edit User </button>
+      </thead>
+      </form>
                
      </body>
 </body>

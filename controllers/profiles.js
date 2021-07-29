@@ -5,23 +5,24 @@ export{
     create,
     deleteProfile as delete,
     edit,
-    update,
-    show
+    update
+    // show
 }
 
-function show(req,res){
-    Profile.findById(req.params.id)
-    .then(profile => {
-        res.render('profiless/show',{
-            profile
-        })
-    })
-}
+// function show(req,res){
+//     Profile.findById(req.params.id)
+//     .then(profile => {
+//         res.render('profiles/show',{
+//             profile
+//         })
+//     })
+// }
 function update(req,res){
+    console.log('im in the updtae function')
     req.body.working = !! req.body.working
     Profile.findByIdAndUpdate(req.params.id, req.body, {new:true})
         .then((profile) =>{
-            res.redirect(`/profiles/${profile._id}`)
+            res.redirect(`/profiles/`)
         })
         
 }

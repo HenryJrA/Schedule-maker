@@ -6,9 +6,10 @@ export {
 
 const profileSchema = new mongoose.Schema({
   name: String,
+  email: String,
   avatar: String,
-  working: Boolean,
-  isAdmin: Boolean 
+  working:Boolean,
+   
 }, {
   timestamps: true
 })
