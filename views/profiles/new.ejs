@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/stylesheets/schedule.css">
-    <title>Document</title>
+    <title>Add User</title>
 </head>
 <body>
        <h3>Add Users</h3>
@@ -16,12 +16,13 @@
                       <th>&nbsp;</th>
                    </tr>
                 </thead>
-            <form action="/profile/add" method="POST">
+            <form action="/profiles" method="POST">
                    <input type="text" name="name" autofocus="autofocus" placeholder="First & Last Name" />
                    <input type="text" name="email" class="invalid" placeholder="yourEmail@example.com" />
-                   <button>Add</button>
-                </form>
-          </div>
-       </div>
+                   <input type="checkbox" name="working">
+                   <button type="submit">Add</button>
+                  </form>
+               
+     </body>
 </body>
 </html>

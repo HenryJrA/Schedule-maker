@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+</head>
+<body>
+  <h1>User List</h1>
+  <a href="/profiles/<%= profiles._id %>new ">Add a new User</a>
+  
+  <ul>
+    <% if (profiles.length) { %> 
+      <% profiles.forEach(profile => { %> 
+        <form action="/profiles/<%= profile._id%>?_method=DELETE" method="POST">
+          <li>
+    <%= profile.name %> 
+    <%= profile.email %> 
+   - <%= profile.working ? 'working' : 'Not working' %>
+   <button>Delete </button>
+  </li>  
+   <br>
+    <% }) %> 
+  </form>
+  <br>
+  <% } else { %>
+    <h3>There are no users yet</h3>
+    <% } %> 
+  </ul>
+</body>
+</html>

@@ -7,12 +7,12 @@ import session from 'express-session'
 import logger from 'morgan'
 import methodOverride from 'method-override'
 import passport from 'passport'
+import './config/database.js'
 
 // create the express app
 const app = express()
 
 // connect to MongoDB with mongoose
-import('./config/database.js')
 
 // load passport
 import('./config/passport.js')
@@ -20,7 +20,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
-import { router as profileRouter } from './routes/profile.js'
+import { router as profilesRouter } from './routes/profiles.js'
 import { router as scheduleRouter } from './routes/schedule.js'
 
 // view engine setup
@@ -30,8 +30,8 @@ app.set(
 )
 app.set('view engine', 'ejs')
 
-// middleware
 app.use(methodOverride('_method'))
+// middleware
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -60,7 +60,7 @@ app.use(passport.session())
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
-app.use('/profile', profileRouter)
+app.use('/profiles', profilesRouter)
 app.use('/schedule', scheduleRouter)
 // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
