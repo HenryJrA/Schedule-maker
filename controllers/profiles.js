@@ -8,9 +8,10 @@ export{
     update
 }
 function update(req,res){
+    req.body.working = !! req.body.working
     Profile.findByIdAndUpdate(req.params.id, req.body, {new:true})
-        .then(() =>{
-            res.redirect
+        .then((profile) =>{
+            res.redirect(`/profiles/${profile._id}`)
         })
         
 }

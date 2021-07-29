@@ -14,16 +14,16 @@
                       <form action="/profiles/<%= profile._id %> ?_method=PUT" method="POST">
                         <th>Name ▼</th>
                         <br>
-                        <input type="text" name="name" autofocus="autofocus" placeholder="First & Last Name" />
+                        <input type="text" value="<%= profile.name %> "name="name" autofocus="autofocus"  />
                         <br>
                       <th>Email ▼</th>
                       <br>
-                      <input type="text" name="email" class="invalid" placeholder="yourEmail@example.com" />
+                      <input type="text" value="<%= profile.email %> " name="email" class="invalid"  />
                       <th>&nbsp;</th>
                      </tr>
                      <br>
-                   <input type="checkbox" name>
-                   <button type="submit">Add</button>
+                   <input type="checkbox" value="<%= profile.working ? 'checked' : '' %>  "name=" working">
+                   <button type="submit">Edit User </button>
                   </thead>
                   </form>
                
