@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/stylesheets/schedule.css">
-    <title>Add User</title>
+    <title>Edit User</title>
 </head>
 <body>
-       <h3>Add Users</h3>
+       <h3>Edit Users</h3>
                 <thead>
                    <tr>
-                      <form action="/profiles" method="POST">
+                      <form action="/profiles/<%= profile._id %> ?_method=PUT" method="POST">
                         <th>Name ▼</th>
                         <br>
                         <input type="text" name="name" autofocus="autofocus" placeholder="First & Last Name" />

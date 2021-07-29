@@ -3,7 +3,24 @@ export{
     index,
     newProfile as new,
     create,
-    deleteProfile as delete
+    deleteProfile as delete,
+    edit,
+    update
+}
+function update(req,res){
+    Profile.findByIdAndUpdate(req.params.id, req.body, {new:true})
+        .then(() =>{
+            res.redirect
+        })
+        
+}
+function edit(req, res){
+    Profile.findById(req.params.id, function(err, profile){
+        res.render('profiles/edit', {
+            profile,
+            err
+        })
+    })
 }
 function newProfile(req, res) {
     res.render('profiles/new')
