@@ -4,7 +4,7 @@ Schedule-maker
 -create a responsive website using HTML, CSS, Node.js, Mongoose, MongoDB
 
 ## Motivation
-Previous experience working at a retail store/company, wantede to know my schedule and wish that we had a way to view our schedule at home or from anywhere, so i decided to make one that's accesible anywhere.
+Previous experience working at a retail store/company, wanted to know my schedule and wish that we had a way to view our schedule at home or from anywhere, so i decided to make one that's accesible anywhere.
 
 ## To play the game:
 Click here (https://schedulemakerproject2.herokuapp.com/)./
