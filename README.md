@@ -6,7 +6,7 @@ Schedule-maker
 ## Motivation
 Previous experience working at a retail store/company, wanted to know my schedule and wish that we had a way to view our schedule at home or from anywhere, so i decided to make one that's accesible anywhere.
 
-## To play the game:
+## To look at the app:
 Click here (https://schedulemakerproject2.herokuapp.com/)./
 
 ## initial Wire frame:
