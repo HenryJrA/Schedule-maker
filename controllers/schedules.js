@@ -22,7 +22,7 @@ function update(req,res){
     console.log('im in the updtae function')
     // req.body.working = !! req.body.working
     // console.log(req.body.working)
-    Schedule.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    Schedule.findByIdAndUpdate(req.params.id.populate('schedule'), req.body, {new:true})
         .then((schedule) =>{
             res.redirect('/schedules/')
         })

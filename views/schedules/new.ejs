@@ -26,15 +26,19 @@
         <br>
         <label for="startWork">End Work: </label>
         <input type="time" id="endWork">
-        <button type="submit">Add</button>
+        
         <br>
-            <label for="cars">Choose a car:</label>
-            <select name="profiles" id="cars">
-              <option value="<%= profile.name %> ">Audi</option>
+            <label for="users">your schedule:</label>
+            <select name="profiles" id="profiles">
+                <% profiles.forEach(function(profile){ %>
+
+                    <option><%= profile.name %> </option>
+               <% })  %>
             </select>
             <br><br>
             <input type="submit" value="Submit">
-      </form>
+        </form>
+        <a href="/"> <button> Home page</button> </a>
 
 </body>
 </html>
