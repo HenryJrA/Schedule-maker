@@ -17,6 +17,7 @@ body{
     size: 50%;
     justify-content: center;
     text-align:center;
+    text-size-adjust: 50%;
 }
 div{
     justify-content: center;

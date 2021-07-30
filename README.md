@@ -20,6 +20,7 @@ Click here (https://schedulemakerproject2.herokuapp.com/)./
 
 <img src='public/images/auth/google/finaltouches.png'>
 <img src='public/images/auth/google/finaluser.png'>
+<img src='public/images/auth/google/schdue.png'>
 
 
 
