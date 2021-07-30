@@ -47,3 +47,4 @@ Heroku
 1- Add an admin property so not everyone can view other users info.
 2- have a accurate user schedule when it's visible when they log in.
 3- fixing Css. 
+4- Adding a message box wherer the user can requeest from admin edits for his schedule
