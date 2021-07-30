@@ -18,18 +18,24 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgba(131, 131, 131, 0.534);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  background-image: url("https://getsling.com/wp-content/uploads/2018/12/pasted-image-0-44.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+
 }
 
 nav {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content:center;  
+  
 }
 
 main {
@@ -41,4 +47,76 @@ main {
 
 h1 {
   font-size: 3.6rem;
+}
+.logout{
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(0, 0, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #941414;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+  justify-content: flex-end;
+  
+}
+.logout:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(143, 9, 9);
+}
+.new{
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(0, 0, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #941414;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+  justify-content: center;
+}
+  .new:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(143, 9, 9);
+  }
+
+.create{
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(0, 0, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #941414;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+.create:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(143, 9, 9);
+}
+.name{
+  font-weight: bolder;
+  font-family:  Arial ;
+  color: rgb(255, 174, 0);
+}
+div{
+  display: inline;
+}
+.avatar{
+  justify-content: flex-end;
 }

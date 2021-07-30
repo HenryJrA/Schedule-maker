@@ -9,15 +9,39 @@ export{
     update
     // show
 }
+// function show(req, res){
+//     console.log(req.res)
+//     res.redirect("/schedules/schedule")
+// }
 
 // function show(req,res){
-//     Profile.findById(req.params.id)
-//     .then(profile => {
-//         res.render('profiles/show',{
-//             profile
+//     Schedule.findById(req.params.id)
+//     .then(schedule => {
+//         res.render('schedules/index',{
+//             schedule
 //         })
 //     })
 // }
+// function show(req, res) {
+//     Schedule.findById(req.params.id)
+//     .populate('schedules')
+//     .then(schedule => {
+//       Schedule.findById(req.user.schedule)
+//       .then(userSchedule => {
+//         res.render('/index', {
+//           // Profile of the user clicked
+//           schedule,
+//           // Profile of the logged in user
+//           userSchedule,
+//           title: `${schedule.name}'s schedule`
+//         })
+//       })
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       res.redirect('/')
+//     })
+//   }
 function update(req,res){
     console.log('im in the updtae function')
     // req.body.working = !! req.body.working

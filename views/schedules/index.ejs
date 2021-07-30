@@ -1,12 +1,62 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="../stylesheets/schedule.css">
+
+  <title>Scheduless</title>
 </head>
 <body>
-    
+  <h1>Schedule List</h1>
+  <a href="/schedules/<%= schedules._id %>new ">Add a new Schedule</a>
+  
+  <ul>
+    <% if (schedules.length) { %> 
+      <% schedules.forEach(schedule => { %> 
+        <form action="/schedules/<%= schedule._id%>?_method=DELETE" method="POST">
+          <li>
+             <%= schedule.name %>  
+             <button>Delete </button>
+            </li>  
+        </form>
+        <br>
+        <form action="/schedules" method="POST">
+             <label for="start">working days from:</label>
+         <input  type="date" id="start" name="trip-start"
+                value="2021-07-29"
+                min="2021-01-01" max="2022-12-31">
+                <br>
+             <label for="start">To:</label>
+         
+         <input type="date" id="start" name="trip-start"
+                value="2021-07-29"
+                min="2021-01-01" max="2022-12-31">
+                <br>
+             
+                 <label for="startWork">Start Work: </label>
+                 <input type="time" id="startTime">
+                 <br>
+                 <label for="startWork">End Work: </label>
+                 <input type="time" id="endWork">
+                 
+                 <br>
+                     <label for="users">your schedule:</label>
+                     <select name="profiles" id="profiles">
+                            <% schedules.forEach(function(schedule){ %>
+            
+                                <option><%= schedule.name %> </option>
+                           <% })  %> 
+                    </select>
+                     <br>
+                    </form>
+          <% }) %> 
+  <br>
+  <% } else { %>
+    <h3>There are no schedules yet</h3>
+    <% } %> 
+   <a href="/"> <button> Home page</button> </a>
+  </ul>
 </body>
 </html>

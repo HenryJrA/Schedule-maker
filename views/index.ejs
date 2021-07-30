@@ -4,18 +4,19 @@
 <main>
   
   <% if (user?.profile.avatar) { %>
-    <div>
+    <div class="avatar">
       <img 
       src="<%= user.profile.avatar %>" 
       alt="<%= user.profile.name %> avatar"
       >
+      <h1 class="name">Hello, <%= user ? user.profile.name : " there!!"  %></h1>
     </div>
     <% } %>
-    <h1>Hello, <%= user ? user.profile.name : " there!!"  %></h1>
-    
-        <a href="/profiles/new">new profile</a>
-        <a href="/schedules/new">Create Schedule</a>
-  </main>
+    <div>
+        <a class="new" href="/profiles/new">new profile</a>
+        <a class="create" href="/schedules/new">Create Schedule</a>
+      </div>
+      </main>
     
    
   

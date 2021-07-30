@@ -3,7 +3,40 @@ label {
     font: 1rem 'Fira Sans', sans-serif;
 }
 
-input,
 label {
     margin: .4rem 0;
+}
+body{
+    
+    /* height: 90vh; */
+    top: 500px;
+    left: 0;
+    background-repeat: no-repeat;
+    background:#ab8e4f;
+    background: radial-gradient(circle );
+    size: 50%;
+    justify-content: center;
+    text-align:center;
+}
+div{
+    justify-content: center;
+}
+button{
+    display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(0, 0, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #941414;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+button:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(143, 9, 9);
 }

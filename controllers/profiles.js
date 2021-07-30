@@ -7,7 +7,6 @@ export{
     deleteProfile as delete,
     edit,
     update
-    // show
 }
 
 // function show(req,res){
@@ -18,6 +17,7 @@ export{
 //         })
 //     })
 // }
+
 function update(req,res){
     console.log('im in the updtae function')
     req.body.working = !! req.body.working

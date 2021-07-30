@@ -7,7 +7,7 @@ export {
 }
 
 router.get('/', isLoggedIn,schedulesCtrl.index)
-// router.get('/:id', profilesCtrl.show)
+// router.get('/:id', isLoggedIn, schedulesCtrl.show)
 router.post('/',isLoggedIn, schedulesCtrl.create)
 router.delete('/:id', isLoggedIn,schedulesCtrl.delete)
 router.get('/new', isLoggedIn,schedulesCtrl.new)
